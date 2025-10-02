@@ -4,7 +4,8 @@ interface BillItems {
     quantity : number,
     price : number
 }
-export default function BillItem({sNo  , medicineName , quantity ,  price} :BillItems ) {
+export default function BillItem(data :BillItems ) {
+    const {sNo  , medicineName , quantity ,  price} = data;
     return (
         <>
                 <tr className="border-t even:bg-gray-50">
