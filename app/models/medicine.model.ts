@@ -18,4 +18,6 @@ const MedicineSchema = new Schema<IMedicine>({
   qty: { type: Number, required: true },
 });
 
-export const Medicine = mongoose.model<IMedicine>("Medicine", MedicineSchema);
+// export const Medicine = mongoose.model<IMedicine>("Medicine", MedicineSchema);
+export const Medicine = (mongoose.models.Medicine as any) || mongoose.model<IMedicine>("Medicine", MedicineSchema);
+
